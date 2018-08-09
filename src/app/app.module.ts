@@ -8,13 +8,15 @@ import { LectureItemComponent } from './lectures/lecture-item/lecture-item.compo
 import { LectureFormComponent } from './lectures/lecture-form/lecture-form.component';
 import { LecturesService } from './lectures/lectures.service';
 import { Configuration } from './config/constants';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LecturesComponent,
     LectureItemComponent,
-    LectureFormComponent
+    LectureFormComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

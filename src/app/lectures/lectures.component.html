@@ -1,5 +1,13 @@
-<ul class="lectures">
-  <div *ngFor="let lecture of lectures" style="text-align:center">
-     <app-lecture-item [lecture]="lecture"></app-lecture-item>
+<div class="card mx-auto mt-3">
+  <div class="card-header d-flex">
+      <h1 class="">Lectures List</h1>
+      <button type="button" class="btn btn-success btn-md ml-auto">
+          Add Lecture
+      </button>
   </div>
-</ul>
+  <div class="card-body">
+    <div *ngFor="let lecture of lectures">
+      <app-lecture-item [lecture]="lecture"></app-lecture-item>
+    </div>
+  </div>
+</div>
