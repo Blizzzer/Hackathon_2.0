@@ -6,8 +6,21 @@
       </button>
   </div>
   <div class="card-body">
-    <div *ngFor="let lecture of lectures">
-      <app-lecture-item [lecture]="lecture"></app-lecture-item>
-    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Time</th>
+          <th scope="col">Abbreviation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let lecture of lectures" (click)="onClick()">
+          <th scope="row">{{lecture.name}}</th>
+          <td><span class="badge badge-warning">{{lecture.day}} {{lecture.startDate}}-{{lecture.finishDate}}</span></td>
+          <td><span class="badge badge-info">{{lecture.abbreviation}}</span></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { LecturesComponent } from './lectures/lectures.component';
-import { LectureItemComponent } from './lectures/lecture-item/lecture-item.component';
 import { LectureFormComponent } from './lectures/lecture-form/lecture-form.component';
 import { LecturesService } from './lectures/lectures.service';
 import { Configuration } from './config/constants';
@@ -14,7 +13,6 @@ import { NavbarComponent } from './navbar/navbar.component';
   declarations: [
     AppComponent,
     LecturesComponent,
-    LectureItemComponent,
     LectureFormComponent,
     NavbarComponent,
   ],

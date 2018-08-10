@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LecturesService } from './lectures.service';
-import { LectureDto } from './lecture-item/lecture.dto';
+import { LectureDto } from './lecture.dto';
 
 @Component({
   selector: 'app-lectures',
@@ -15,6 +15,13 @@ export class LecturesComponent implements OnInit {
     this.lecturesService.getLectures().subscribe((lectures: LectureDto[]) => {
       this.lectures = lectures;
     })
+  }
+
+  onClick() {
+    console.log('BOOM');
+  }
+  onDelete() {
+    console.log('BOOM BOOM');
   }
 
 }

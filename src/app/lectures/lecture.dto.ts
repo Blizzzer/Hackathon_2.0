@@ -4,5 +4,5 @@ export class LectureDto {
     public abbreviation: string;
     public day: string;
     public startDate: string;
-    public endDate: string;
+    public finishDate: string;
   }
