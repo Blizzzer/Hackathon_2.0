@@ -1,26 +1,14 @@
 <div class="card mx-auto mt-3">
   <div class="card-header d-flex">
       <h1 class="">Lectures List</h1>
-      <button type="button" class="btn btn-success btn-md ml-auto">
+      <button type="button" class="btn btn-success btn-md ml-auto" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Add Lecture
       </button>
   </div>
   <div class="card-body">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Time</th>
-          <th scope="col">Abbreviation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let lecture of lectures" (click)="onClick()">
-          <th scope="row">{{lecture.name}}</th>
-          <td><span class="badge badge-warning">{{lecture.day}} {{lecture.startDate}}-{{lecture.finishDate}}</span></td>
-          <td><span class="badge badge-info">{{lecture.abbreviation}}</span></td>
-        </tr>
-      </tbody>
-    </table>
+      <div class="collapse" id="collapseExample">
+          <app-lecture-form></app-lecture-form>
+      </div>
+    <app-lectures-list></app-lectures-list>
   </div>
 </div>

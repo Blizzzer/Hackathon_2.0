@@ -9,6 +9,7 @@ import { LecturesService } from './lectures/lectures.service';
 import { Configuration } from './config/constants';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RoutingModule } from './routing/routing.module';
+import { LecturesListComponent } from './lectures/lectures-list/lectures-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { RoutingModule } from './routing/routing.module';
     LecturesComponent,
     LectureFormComponent,
     NavbarComponent,
+    LecturesListComponent,
   ],
   imports: [
     BrowserModule,
