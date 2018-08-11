@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LectureDto } from '../lecture.dto';
 
 @Component({
   selector: 'app-lecture-form',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lecture-form.component.css']
 })
 export class LectureFormComponent implements OnInit {
-
-  constructor() { }
+  public lecture: LectureDto;
+  constructor() {}
 
   ngOnInit() {
+    this.lecture = new LectureDto;
+  }
+
+  onSave(){
+    console.log(typeof this.lecture.finishDate);
+    console.log(this.lecture);
   }
 
 }

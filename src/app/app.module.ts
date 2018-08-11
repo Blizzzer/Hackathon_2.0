@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { LecturesComponent } from './lectures/lectures.component';
@@ -10,6 +11,7 @@ import { Configuration } from './config/constants';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RoutingModule } from './routing/routing.module';
 import { LecturesListComponent } from './lectures/lectures-list/lectures-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { LecturesListComponent } from './lectures/lectures-list/lectures-list.co
     BrowserModule,
     HttpClientModule,
     RoutingModule,
+    FormsModule,
+    NgbModule.forRoot(),
   ],
   providers: [LecturesService, Configuration],
   bootstrap: [AppComponent]

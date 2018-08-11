@@ -1,16 +1,37 @@
 <div class="card mb-3">
   <div class="card-header">
     <h3>Add lecture</h3>
-  </div>
-  <div class="card-body">
-    Some inputs
-  </div>
-  <div class="card-footer d-flex">
-      <button type="button" class="btn btn-success btn-md ml-auto">
-          Save
-      </button>
-      <button type="button" class="btn btn-success btn-md ml-2">
-          Cancel
-      </button>
-  </div>
+    </div>
+    <div class="card-body">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+            </div>
+            <input type="text" class="form-control" [(ngModel)]="lecture.name">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Day</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" [(ngModel)]="lecture.day">
+              <option>MONDAY</option>
+              <option>TUESDAY</option>
+              <option>WEDNESDAY</option>
+              <option>THURSDAY</option>
+              <option>FRIDAY</option>
+              <option>SATURDAY</option>
+              <option>SUNDAY</option>
+            </select>
+        </div>
+        <ngb-timepicker [(ngModel)]="lecture.startDate"></ngb-timepicker>
+        <ngb-timepicker [(ngModel)]="lecture.finishDate"></ngb-timepicker>
+    </div>
+    <div class="card-footer d-flex">
+        <button type="button" class="btn btn-success btn-md ml-auto" (click)="onSave()">
+            Save
+        </button>
+        <button type="button" class="btn btn-success btn-md ml-2">
+            Cancel
+        </button>
+    </div>
 </div>
