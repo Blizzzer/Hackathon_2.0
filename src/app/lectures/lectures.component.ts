@@ -20,8 +20,5 @@ export class LecturesComponent implements OnInit {
   onClick() {
     console.log('BOOM');
   }
-  onDelete() {
-    console.log('BOOM BOOM');
-  }
 
 }

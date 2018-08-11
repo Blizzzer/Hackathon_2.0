@@ -8,6 +8,7 @@ import { LectureFormComponent } from './lectures/lecture-form/lecture-form.compo
 import { LecturesService } from './lectures/lectures.service';
 import { Configuration } from './config/constants';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    RoutingModule,
   ],
   providers: [LecturesService, Configuration],
   bootstrap: [AppComponent]
