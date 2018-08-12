@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '../../../node_modules/@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Configuration } from '../config/constants';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LectureDetailsService {
+export class LectureService {
   private actionUrl: string;
   constructor(private http: HttpClient, private _conf: Configuration) {
     this.actionUrl = _conf.Server;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LecturesService } from '../lectures.service';
 import { LectureDto } from '../lecture.dto';
-import { Router } from '../../../../node_modules/@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lectures-list',
