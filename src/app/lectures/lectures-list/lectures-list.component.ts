@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LecturesService } from '../lectures.service';
 import { LectureDto } from '../lecture.dto';
+import { Router } from '../../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-lectures-list',
@@ -9,7 +10,8 @@ import { LectureDto } from '../lecture.dto';
 })
 export class LecturesListComponent implements OnInit {
   private lectures: LectureDto[];
-  constructor(private lecturesService: LecturesService) { }
+  constructor(private lecturesService: LecturesService, private router: Router) {
+   }
 
   ngOnInit() {
     this.lecturesService.getLectures().subscribe((lectures: LectureDto[]) => {
@@ -17,8 +19,9 @@ export class LecturesListComponent implements OnInit {
     })
   }
   
-  onClick() {
-    console.log('BOOM');
+  onClick(lecture: LectureDto) {
+      this.router.navigate(['/lecture/' + lecture.id]);
+
   }
 
 

@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RoutingModule } from './routing/routing.module';
 import { LecturesListComponent } from './lectures/lectures-list/lectures-list.component';
 import { FormsModule } from '@angular/forms';
+import { LectureDetailsComponent } from './lecture-details/lecture-details.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     LectureFormComponent,
     NavbarComponent,
     LecturesListComponent,
+    LectureDetailsComponent,
   ],
   imports: [
     BrowserModule,

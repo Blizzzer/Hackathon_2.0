@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let lecture of lectures" (click)="onClick()">
+    <tr *ngFor="let lecture of lectures" (click)="onClick(lecture)">
       <th scope="row">{{lecture.name}}</th>
       <td><span class="badge badge-warning">{{lecture.day}} {{lecture.startDate}}-{{lecture.finishDate}}</span></td>
       <td><span class="badge badge-info">{{lecture.abbreviation}}</span></td>
