@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LecturesService } from '../lectures.service';
 import { LectureDto } from '../../dto/lecture.dto';
 import { Router } from '@angular/router';
+import { TimeService } from '../../shared/time.service';
 
 @Component({
   selector: 'app-lectures-list',
@@ -9,14 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./lectures-list.component.css']
 })
 export class LecturesListComponent implements OnInit {
-  private lectures: LectureDto[];
-  constructor(private lecturesService: LecturesService, private router: Router) {
+  @Input() lectures: LectureDto[];
+  constructor(private router: Router) {
    }
 
   ngOnInit() {
-    this.lecturesService.getLectures().subscribe((lectures: LectureDto[]) => {
-      this.lectures = lectures;
-    })
   }
   
   onClick(lecture: LectureDto) {
@@ -24,5 +22,12 @@ export class LecturesListComponent implements OnInit {
 
   }
 
+  getStartHour(lecture: LectureDto){
+    return TimeService.msecToTime(Number(lecture.startHour));
+  }
+
+  getFinishHour(lecture: LectureDto){
+    return TimeService.msecToTime(Number(lecture.finishHour));
+  }
 
 }

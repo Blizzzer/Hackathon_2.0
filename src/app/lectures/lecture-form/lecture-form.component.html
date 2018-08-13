@@ -23,8 +23,8 @@
               <option>SUNDAY</option>
             </select>
         </div>
-        <ngb-timepicker [(ngModel)]="lecture.startDate"></ngb-timepicker>
-        <ngb-timepicker [(ngModel)]="lecture.finishDate"></ngb-timepicker>
+        <ngb-timepicker [(ngModel)]="startTime" [minuteStep]="15"></ngb-timepicker>
+        <ngb-timepicker [(ngModel)]="finishTime" [minuteStep]="15"></ngb-timepicker>
     </div>
     <div class="card-footer d-flex">
         <button type="button" class="btn btn-success btn-md ml-auto" (click)="onSave()">

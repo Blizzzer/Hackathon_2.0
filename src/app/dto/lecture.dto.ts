@@ -3,6 +3,6 @@ export class LectureDto {
     public name: string;
     public abbreviation: string;
     public day: string;
-    public startDate: string;
-    public finishDate: string;
+    public startHour: string;
+    public finishHour: string;
   }

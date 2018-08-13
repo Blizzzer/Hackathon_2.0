@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureDetailsComponent } from './lecture/lecture-details/lecture-details.component';
 import { QuestionsListComponent } from './lecture/questions-list/questions-list.component';
+import { MsecToHourPipe } from './shared/msecToHour.pipe';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { QuestionsListComponent } from './lecture/questions-list/questions-list.
     LectureComponent,
     LectureDetailsComponent,
     QuestionsListComponent,
+    MsecToHourPipe,
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,8 @@
   </div>
   <div class="card-body">
       <div class="collapse" id="collapseExample">
-          <app-lecture-form></app-lecture-form>
+          <app-lecture-form (update)="update()"></app-lecture-form>
       </div>
-    <app-lectures-list></app-lectures-list>
+    <app-lectures-list [lectures]="lectures"></app-lectures-list>
   </div>
 </div>
