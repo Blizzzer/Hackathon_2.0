@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LecturesService } from '../lectures.service';
-import { LectureDto } from '../lecture.dto';
+import { LectureDto } from '../../dto/lecture.dto';
 import { Router } from '@angular/router';
 
 @Component({

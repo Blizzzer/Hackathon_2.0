@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LectureDto } from '../lecture.dto';
+import { LectureDto } from '../../dto/lecture.dto';
 
 @Component({
   selector: 'app-lecture-form',

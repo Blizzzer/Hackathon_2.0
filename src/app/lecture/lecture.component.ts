@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LectureDto } from '../lectures/lecture.dto';
+import { LectureDto } from '../dto/lecture.dto';
 import { ActivatedRoute } from '@angular/router';
 import { LectureService } from './lecture.service';
 
